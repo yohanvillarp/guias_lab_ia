@@ -1,0 +1,1 @@
+Aquí debería guardarse el modelo generado por entrenamiento_modelo.py

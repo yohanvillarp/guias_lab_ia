@@ -1,0 +1,1 @@
+aquí deberían guardarse todas las imágenes tomadas desde captura_Rostro para entrenamiento
