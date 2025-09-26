@@ -1,0 +1,13 @@
+# Lista de dependencias necesarias para ejecutar el proyecto de Detector de Somnolenciay 
+# Reconocimiento Facial.
+# Visión por Computadora y procesamiento de imágenes
+opencv-python
+imutils
+dlib
+# Manipulación de datos y cálculos científicos (necesario para EAR, etc.)
+numpy
+scipy
+# Automatización y alertas
+pywhatkit
+pyautogui
+# Nota: pyautogui es crucial para simular la pulsación de ENTER y enviar el mensaje de WhatsApp.

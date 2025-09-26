@@ -1,4 +1,4 @@
-# módulos importados
+# librerías importadas
 
 import cv2
 import numpy as np
@@ -55,6 +55,7 @@ nivel_alarma: str = "OFF"
 
 # Funciones de audio
 
+#  Ejecuta en un hilo separado para manejar la reproducción del sonido de la alarma.
 def audio_loop():
     try:
         pygame.mixer.init()
@@ -82,6 +83,7 @@ def audio_loop():
             pygame.mixer.quit()
 
 
+# inicia el proceso de reproducción de audio
 def start_audio_thread():
     global alarma_hilo
     if not alarma_hilo or not alarma_hilo.is_alive():
@@ -91,6 +93,7 @@ def start_audio_thread():
         print("Evento: Hilo de audio iniciado.")
 
 
+# detiene de forma segura el hilo de reproducción de audio.
 def stop_audio_thread():
     global alarma_hilo, nivel_alarma
     if alarma_hilo and alarma_hilo.is_alive():
@@ -102,11 +105,13 @@ def stop_audio_thread():
 
 # Procesamiento de imagen
 
+# estandariza y optimiza la imagen para el análisis posterior.
 def preprocess_frame(frame):
     frame = cv2.resize(frame, (VIDEO_WIDTH, VIDEO_HEIGHT))
     return cv2.convertScaleAbs(frame, alpha=CONTRAST, beta=BRIGHTNESS)
 
 
+# ajusta el contraste y el brillo del fotograma.
 def apply_blur_and_hsv(frame):
     blur = cv2.GaussianBlur(frame, GAUSSIAN_KERNEL, 0)
     return cv2.cvtColor(blur, cv2.COLOR_BGR2HSV)
