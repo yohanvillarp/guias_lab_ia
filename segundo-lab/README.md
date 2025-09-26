@@ -1,7 +1,7 @@
 
 -----
 
-# Drowsiness Detector & Alert System
+# Detector de somnolencia y sistema de alerta
 
 Este proyecto utiliza **Visión por Computadora (OpenCV, Dlib)** para monitorear el rostro de un conductor en tiempo real. Cuando se detectan signos de somnolencia (ojos cerrados durante un período prolongado), el sistema activa alarmas sonoras progresivas y envía una alerta de **WhatsApp** al contacto de emergencia.
 
